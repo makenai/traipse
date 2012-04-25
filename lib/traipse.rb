@@ -22,7 +22,7 @@ module Traipse
     # Handle wildcard hash keys
     if key == '*'
       object.keys.each do |subkey|
-        results += _find( object[ subkey ], rest )
+        results += _find( object, [ subkey, *rest ] )
       end
       return results
     end

@@ -1,0 +1,36 @@
+= Traipse
+
+Traipse allows you to address a data structure with a dot notated string. This is useful for extracting certain nodes
+in a data structure (expecially JSON-parsed) and storing the 'path' to those nodes in a database.
+
+== Installation
+
+Traipse is available as a RubyGem:
+
+    gem install traipse
+    
+=== Example
+
+    data = {
+      "name" => "Percival",
+      "board" => {
+        "name" => "cats"
+      },
+      "categories" => [
+        { "name" => "animals" },
+        { "name" => "kitties" },
+        { "name" => "robots" },    
+      ]
+    }
+    
+    Traipse.find( data, 'name' ) # [ "Percival" ]
+    
+    Traipse.find( data, 'board.name' ) # [ "cats" ]
+    
+    Traipse.find( data, 'categories.name' ) # [ "animals", "kitties", "robots" ]
+
+    Traipse.find( data, '*.name' ) # [ "cats", "animals", "kitties", "robots" ]
+    
+== Authors
+
+* Pawel Szymczykowski

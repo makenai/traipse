@@ -54,7 +54,7 @@ describe Traipse do
       [ "converse", "adidas", "nike", "Calvin Klein", 
         "Diesel", "Betsey Johnson", [ "Marc", "Ecko" ] ]
         
-    Traipse.find( data, '*.name' ).should == ["cats"]
+    Traipse.find( data, '*.name' ).should == [ "cats", "animals", "kitties", "robots" ]
   end
   
   it "can do multiple wildcards" do

@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Traipse::VERSION
   s.authors     = ["Pawel Szymczykowski"]
   s.email       = ["makenai@gmail.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/makenai/traipse"
+  s.summary     = %q{Traverse data structures with a dot notated string.}
+  s.description = %q{Traipse is a library that allows you to address a data structure of Hashes & Arrays using a dot notated string & wildcards. ex: 'categories.*.name'. Like X-Path but dumber.}
 
   s.rubyforge_project = "traipse"
 
