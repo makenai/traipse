@@ -24,11 +24,8 @@ Traipse is available as a RubyGem:
     }
     
     Traipse.find( data, 'name' ) # [ "Percival" ]
-    
     Traipse.find( data, 'board.name' ) # [ "cats" ]
-    
     Traipse.find( data, 'categories.name' ) # [ "animals", "kitties", "robots" ]
-
     Traipse.find( data, '*.name' ) # [ "cats", "animals", "kitties", "robots" ]
     
 == Authors
